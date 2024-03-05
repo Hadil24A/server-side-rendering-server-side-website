@@ -2,24 +2,27 @@
   "name": "server-side-rendering",
   "version": "1.0.0",
   "description": "Ontwerp en ontwikkel een server-side website voor een opdrachtgever.",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [
     "node",
     "express",
     "ejs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hadil24A/server-side-rendering-server-side-website"
+  },
   "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/fdnd-task/server-side-rendering/issues"
+    "url": "https://fdnd-agency.directus.app/items/tm_story"
   },
   "homepage": "https://github.com/fdnd-task/server-side-rendering#readme",
   "dependencies": {
