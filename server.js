@@ -38,7 +38,7 @@ app.get('/', function(request, response) {
     // apiData bevat gegevens van alle stories
     // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
 
-    // Render index.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd story
+    // Render index.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
     response.render('index', {
       stories: storyData.data,
     })
