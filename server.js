@@ -7,7 +7,7 @@ import express from 'express'
 import fetchJson from './helpers/fetch-json.js'
 
 // Haal alle stories uit de directus API op
-const storyData = await fetchJson('https://fdnd-agency.directus.app/items/tm_story')
+const stories = await fetchJson('https://fdnd-agency.directus.app/items/tm_story')
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -29,20 +29,33 @@ app.use(express.urlencoded({extended: true}))
 
 // 2. Routes die HTTP Request and Responses afhandelen
 
-// Maak een GET route voor de index
+// Maak een GET route voor de homepage
 app.get('/', function(request, response) {
 
   // Haal alle stories uit de directus API op
-  fetchJson('https://fdnd-agency.directus.app/items/tm_story').then((storyData) => {
+  fetchJson('https://fdnd-agency.directus.app/items/tm_story').then((stories) => {
 
-    // apiData bevat gegevens van alle stories
+    // stories bevat gegevens van alle stories
     // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
 
-    // Render index.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
-    response.render('index', {
-      stories: storyData.data,
+    // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
+    response.render('homepage', {
     })
   })
+})
+
+// Maak een GET route voor de lessons page
+app.get('/lessons', function(request, response) {
+
+// Haal alle stories uit de directus API op
+fetchJson('https://fdnd-agency.directus.app/items/tm_playlist').then((playlist) => {
+
+// stories bevat gegevens van alle stories
+
+// Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
+response.render('lessons', {
+  playlist: playlist})
+})
 })
 
 

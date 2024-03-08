@@ -1,0 +1,89 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bar {
+    background-color: #EAEAEA; 
+    display: block;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    width: 25px;
+}
+
+.navigatie {
+    background: #494949;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 16px;
+    margin: 0em 1em 0em 1em;
+    position: fixed; bottom: 2em; right: 1em;
+    z-index: 999;
+}
+
+.navigatie{
+    display: block;
+}
+
+.navigatie.active {
+    background-color: rgba(251, 251, 251, 0.9);
+}
+
+.navigatie.active .bar:nth-child(2){
+    opacity: 0;
+}
+.navigatie.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    background-color: rgba(73, 73, 73, 0.9);
+}
+.navigatie.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: rgba(73, 73, 73, 0.9);
+}
+
+.home-menu {
+    visibility: hidden;
+}
+
+.home-menu-active {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(73, 73, 73, 0.9);
+    border: none;
+    visibility: visible;
+    z-index: 648;
+}
+
+dialog {
+    width: 100vw;
+    height: 100vh;
+    padding: 3em;
+}
+
+dialog a {
+    text-decoration: none;
+    color: #EAEAEA;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 16px;
+}
+
+dialog a:nth-last-of-type(5) {
+    background: #3F92B6;
+}
+dialog a:nth-last-of-type(4) {
+    background: #599AE7;
+}
+dialog a:nth-last-of-type(3) {
+    background: #954BE2;
+}
+dialog a:nth-last-of-type(2) {
+    background: #06A192;
+}
+dialog a:nth-last-of-type(1) {
+    background: #FD8C73;
+}
