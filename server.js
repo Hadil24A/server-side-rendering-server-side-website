@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
    
 app.get("/", function (request, response) {      // Maak een GET route voor de homepage
-  response.render("homepage", {});      // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
+  response.render("homepage", {});          // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
 });
 
     
@@ -39,8 +39,8 @@ app.get("/lessons", function (request, response) {      // Maak een GET route vo
       stories: storyData.data, 
       language: languageData.data,
       playlist: playlistData.data,
-      audio: audioData.data})
-  });    // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
+      audio: audioData.data})        // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
+  });   
        
 });
 

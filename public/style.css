@@ -3,17 +3,31 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font: "Poppins";
+    font-family: "Poppins";
   }
 
 :root {
   /* BACKGROUND COLOURS */
-  --method-bg: rgb(20, 33, 81); background: linear-gradient (0deg, rgba(20, 33, 81, 1) 0%, rgba(71, 24, 113, 1) 100%);
-  --statistics-bg: rgb(27, 112, 112); background: linear-gradient(0deg, rgba(27, 112, 112, 1) 0%, rgba(33, 155, 155, 1) 100%);
-  --testing-bg: rgb(27, 61, 112);
-  --lessons-bg: linear-gradient (0deg, rgba(27, 61, 112, 1) 0%, rgba(33, 89, 155, 1) 100%);
-  --profile-bg: rgb(180, 87, 81); background: linear-gradient (0deg, rgba(180, 87, 81, 1) 0%, rgba(240, 119, 93, 1) 100%);
-  --menu-overlay-bg: rgba(41, 41, 41, 0.95);
+  --method-1: rgba(71,24,113,1);
+  --method-2: rgba(20,33,81,1);
+  --method-3: rgb(20,33,81);
+  
+  --statistics-1: rgba(33,155,155,1);
+  --statistics-2: rgba(27,112,112,1);
+  --statistics-3: rgb(27,112,112);
+  
+  --testing-1: rgba(33,89,155,1);
+  --testing-2: rgba(27,61,112,1);
+  --testing-3: rgb(27,61,112);
+  
+  --profile-1: rgba(240,119,93,1) ;
+  --profile-2:  rgba(180,87,81,1) ;
+  --profile-3: rgb(180,87,81);
+
+  --method-bg: linear-gradient( var(--method-1), var(--method-2), var(--method-3));
+  --statistics-bg: linear-gradient( var(--statistics-1), var(--statistics-2), var(--statistics-3));
+  --testing-bg: linear-gradient( var(--testing-1), var(--testing-2), var(--testing-3));
+  --profile-bg: linear-gradient( var(--profile-1), var(--profile-2), var(--profile-3));
 
   /* MENU COLOURS */
   --menu-bg: #494949;
@@ -30,18 +44,43 @@ html {
 
 @font-face {
     font-family: "Poppins";
-    font-weight: 100;
     src: url(/font/Poppins-Regular.ttf);
   }
 @font-face {
-    font-family: "Poppins-bold";
-    font-weight: 200;
+    font-family: "PoppinsBold";
     src: url(/font/Poppins-SemiBold.ttf);
   }
 
-  body {
-    background: var(--lessons-bg);
-  }
+/* BACKGROUNDS FOR DIFFERENT PAGES */
+
+.homescreen {
+  background-image: url(/images/home.png);
+  background-size: 100vw, 100vh;
+}
+
+.lessonsPage {
+  background: var(--method-bg);
+}
+
+/* END BACKGROUNDS */
+
+.start-text {
+  background: var(--menu-clr);
+  padding: 0.5em;
+  width: 14em;
+  border-radius: 8px;
+  position: absolute; left: 2.5em; top: 21.5em;
+}
+
+#start {
+  background: var(--lessons-btn-bg);
+  border: none;
+  border-radius: 8px;
+  color: var(--menu-clr);
+  height: 2em;
+  margin-top: 1em;
+  width: 15.5em;
+}
 
 h1 {
   font-size: 32px;
@@ -65,6 +104,10 @@ a {
     cursor: pointer;
     font-size: 16px;
     text-decoration: none;
+  }
+
+  button p {
+    color: var(--menu-clr);
   }
 
 .bar {
@@ -106,6 +149,7 @@ a {
     background-color: var(--active-menu-clr);
     transform: translateY(8px) rotate(45deg);
   }
+
 .navigatie.active .bar:nth-child(3) {
     background-color: var(--active-menu-clr);
     transform: translateY(-8px) rotate(-45deg);
@@ -118,23 +162,27 @@ a {
 .home-menu-active {
     background-color: var(--menu-overlay-bg);
     border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     visibility: visible;
     z-index: 648;
   }
 
 dialog {
-    height: 100vh;
-    padding: 3em;
-    width: 100vw;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: auto auto;
+      height: 100%;
+      justify-content: center;
+      padding: 3em;
+      width: 100%;
   }
 
 dialog a {
+    align-items: center;
     border-radius: 16px;
     color: var(--menu-clr);
-    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 1em;
     text-decoration: none;
   }
@@ -157,6 +205,14 @@ dialog a:nth-of-type(4) {
 
 dialog a:nth-of-type(5) {
   background: var(--profile-btn-bg);
+}
+
+dialog p {
+  color: var(--active-menu-bg);
+}
+
+.activePage {
+  border: solid 5px var(--active-menu-bg);
 }
 
 .playlist {
