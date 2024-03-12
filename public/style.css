@@ -6,6 +6,11 @@ html {
     font-family: "Poppins";
   }
 
+ /*___ __ __  __  ______   ___   ___  ___    ____  ____    ___   ____   ____ ____  ______ __  ____  __ 
+  //   || || (( \ | || |  // \\  ||\\//||    || \\ || \\  // \\  || \\ ||    || \\ | || | || ||    (( \
+ ((    || ||  \\    ||   ((   )) || \/ ||    ||_// ||_// ((   )) ||_// ||==  ||_//   ||   || ||==   \\ 
+  \\__ \\_// \_))   ||    \\_//  ||    ||    ||    || \\  \\_//  ||    ||___ || \\   ||   || ||___ \_))*/
+
 :root {
   /* BACKGROUND COLOURS */
   --method-1: rgba(71,24,113,1);
@@ -28,6 +33,7 @@ html {
   --statistics-bg: linear-gradient( var(--statistics-1), var(--statistics-2), var(--statistics-3));
   --testing-bg: linear-gradient( var(--testing-1), var(--testing-2), var(--testing-3));
   --profile-bg: linear-gradient( var(--profile-1), var(--profile-2), var(--profile-3));
+  --menu-overlay-bg: rgba(41, 41, 41, 0.95);
 
   /* MENU COLOURS */
   --menu-bg: #494949;
@@ -60,9 +66,13 @@ html {
 
 .lessonsPage {
   background: var(--method-bg);
+  width: 100vw;
 }
 
-/* END BACKGROUNDS */
+/*__  __   ___   ___  ___  ____    ____   ___    ___   ____
+  ||  ||  // \\  ||\\//|| ||       || \\ // \\  // \\ ||   
+  ||==|| ((   )) || \/ || ||==     ||_// ||=|| (( ___ ||== 
+  ||  ||  \\_//  ||    || ||___    ||    || ||  \\_|| ||___*/
 
 .start-text {
   background: var(--menu-clr);
@@ -82,16 +92,29 @@ html {
   width: 15.5em;
 }
 
+/*___   ____ __  __  ____ ____   ___  __   
+ // \\ ||    ||\ || ||    || \\ // \\ ||   
+(( ___ ||==  ||\\|| ||==  ||_// ||=|| ||   
+ \\_|| ||___ || \|| ||___ || \\ || || ||__| */
+                                          
 h1 {
   font-size: 32px;
+  color: var(--active-menu-bg);
+  text-align: center;
+  padding: 1em;
 }
 
 h2 {
   font-size: 28px;
+  color: var(--active-menu-bg);
+  padding-left: 1em;
+
 }
 
 h3, h4, h5 {
   font-size: 20px;
+  color: var(--active-menu-bg);
+  padding-left: 1em;
 }
 
 p {
@@ -109,6 +132,11 @@ a {
   button p {
     color: var(--menu-clr);
   }
+
+/*__  __  ___  __ __ __   ___   ___  ______ __   ___   __  __
+  ||\ || // \\ || || ||  // \\ // \\ | || | ||  // \\  ||\ ||
+  ||\\|| ||=|| \\ // || (( ___ ||=||   ||   || ((   )) ||\\||
+  || \|| || ||  \V/  ||  \\_|| || ||   ||   ||  \\_//  || \|| */
 
 .bar {
   background-color: var(--menu-clr);
@@ -182,6 +210,7 @@ dialog a {
     color: var(--menu-clr);
     display: flex;
     flex-direction: column;
+    height: 113px;
     justify-content: center;
     padding: 1em;
     text-decoration: none;
@@ -215,38 +244,205 @@ dialog p {
   border: solid 5px var(--active-menu-bg);
 }
 
-.playlist {
-    background: var(--menu-clr);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+/*__     ____  __   __    ___   __  __  __ 
+  ||    ||    (( \ (( \  // \\  ||\ || (( \
+  ||    ||==   \\   \\  ((   )) ||\\||  \\ 
+  ||__| ||___ \_)) \_))  \\_//  || \|| \_)) */
+
+.playlist, .makeAPlaylist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ownPlaylist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
 
+.playlist li, .makeAPlaylist {
+  background: var(--menu-clr);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 14em;
+  margin: 2em;
+  padding: 0.5em;
+  position: relative;
+  width: 10em;
+}
+
 .playlist img {
-  height: 5em;
+  border-radius: 8px;
+  height: 7.5em;
+}
+
+.playPlaylist {
+  bottom: 0.5em;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: max-content;
+}
+
+.playlist li p:first-child {
+  font-weight: bold;
+}
+
+.playlist p:last-child {
+  bottom: 1.3em;
+  font-size: 12px;
+  left: 3em;
+  position: absolute;
+}
+
+.makeAPlaylist {
+  background: rgb(73, 67, 117,0.9);
+}
+
+.makeAPlaylist p:nth-of-type(1) {
+  color: var(--active-menu-bg);
+  padding: 0.5em;
+}
+
+.makeAPlaylist p:nth-of-type(2) {
+  color: var(--active-menu-bg);
+  font-size: 13px;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.makeAPlaylist svg {
+  margin: 0.5em 2.5em 0 2.5em;
+}
+
+.heart, .redHeart {
+  bottom: 1em;
+  position: absolute;
+  right: 1em;
+}
+
+#listening {
+  color: var(--active-menu-bg);
+  background: #139943;
+  border-radius: 8px;
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4px;
+}
+
+#listening p {
+  color: var(--active-menu-bg);
+}
+
+#languageSelect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#languageButton {
+  display: flex;
+  flex-direction: row;
+  height: 2.5em;
+  border-radius: 8px;
+  border: none;
+  background: var(--active-menu-bg);
+  margin: 0.5em;
+  padding: 0.3em;
+  width: max-content;
+}
+
+#languageButton p {
+  color: var(--active-menu-clr);
+}
+
+#languageButton img {
+  padding: 0.2em 0.2em 0 0;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stories li {
+  background: var(--menu-clr);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 12em;
+  margin: 2em;
+  padding: 0.5em;
+  position: relative;
+  width: 28em;
+}
+
+.stories img {
+  height: 11em;
+  width: 11em;
+  border-radius: 8px;
+}
+
+.storyInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.stories p:nth-of-type(1) {
+  padding-left: 0.5em;
+}
+
+.stories p:nth-of-type(2) {
+  line-height: 1.3em;
+  padding-left: 0.5em;
+}
+
+.playStory {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 0.5em 0 0 0.5em;
+  width: max-content;
+}
+  
+
+.addToPlaylist, .downloadStory  {
+  background: none;
+  border: none;
 }
 
 .downloadStory {
-    bottom: 1em;
-    position: absolute;
-    right: 3em;
-  }
+  bottom: 1em;
+  position: absolute;
+  right: 3em;
+}
 
 .addToPlaylist {
-    bottom: 1em;
-    position: absolute;
-    right: 1em;
-  }
+  bottom: 1.25em;
+  position: absolute;
+  right: 1em;
+}
 
-.playlist p:last-child {
-    bottom: 1em;
-    left: 3em;
-    position: absolute;
-  }
+.pages {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  justify-content: center;
+}
 
-.heart, .redHeart {
-    bottom: 1em;
-    position: absolute;
-    right: 1em;
-  }
+.likedPlaylists #next, #previous {
+  background: #9264F4;
+  border: none;
+  border-radius: 8px;
+  color: var(--active-menu-bg);
+  height: 2em;
+  width: 4em;
+}
+
+

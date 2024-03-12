@@ -21,6 +21,7 @@ app.use(express.static("public"));
     // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({ extended: true }));
 
+
                                                             // 2. Routes 
 
    
@@ -28,6 +29,9 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
   response.render("homepage", {});          // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd stories
 });
 
+app.get("/testing", function (request, response) {      // Maak een GET route voor de testing page
+  response.send("testing");         
+});
     
 app.get("/lessons", function (request, response) {      // Maak een GET route voor de lessons page
   Promise.all([
@@ -44,6 +48,13 @@ app.get("/lessons", function (request, response) {      // Maak een GET route vo
        
 });
 
+app.get("/statistics", function (request, response) {      // Maak een GET route voor de statistics page
+  response.send("statistics");         
+});
+
+app.get("/profile", function (request, response) {      // Maak een GET route voor de profile page
+  response.send("profile");         
+});
 
 // 3. Start de webserver
 
