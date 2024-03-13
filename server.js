@@ -43,12 +43,25 @@ app.get("/lessons", function (request, response) {      // Maak een GET route vo
       stories: storyData.data, 
       language: languageData.data,
       playlist: playlistData.data,
-      audio: audioData.data})        // Render homepage.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
+      audio: audioData.data})        // Render lessons.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
   });   
        
 });
 
-app.get("/statistics", function (request, response) {      // Maak een GET route voor de statistics page
+app.get("/lessons/stories", function (request, response) {      // GET route voor de stories page
+  Promise.all([
+    fetchJson('https://fdnd-agency.directus.app/items/tm_story'),
+    fetchJson('https://fdnd-agency.directus.app/items/tm_language'),
+    fetchJson('https://fdnd-agency.directus.app/items/tm_audio')]).then(([storyData, languageData, playlistData, audioData]) => {    // Haal alle playlists uit de directus API op
+    response.render('lessons', {
+      stories: storyData.data, 
+      language: languageData.data,
+      playlist: playlistData.data,
+      audio: audioData.data})
+    });
+  });
+
+app.get("/statistics", function (request, response) {      //GET route voor de statistics page
   response.send("statistics");         
 });
 

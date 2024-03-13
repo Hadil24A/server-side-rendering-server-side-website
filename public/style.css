@@ -341,8 +341,8 @@ dialog p {
 #languageSelect {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1em;
 }
 
 #languageButton {
@@ -436,7 +436,7 @@ dialog p {
   justify-content: center;
 }
 
-.likedPlaylists #next, #previous {
+ #next, #previous {
   background: #9264F4;
   border: none;
   border-radius: 8px;
@@ -444,5 +444,3 @@ dialog p {
   height: 2em;
   width: 4em;
 }
-
-
