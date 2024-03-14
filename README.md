@@ -1,34 +1,31 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Tumi Mundo
 
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
+Ik heb een website gemaakt waar de eindgebruikers in staat zijn om content van de methode af te kunnen spelen. 
+<img src="https://github.com/Hadil24A/server-side-rendering-server-side-website/assets/144008714/e09465db-a55b-4dc5-9fbe-0e1f7b1e5dfc" width="300px>
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+Via het menu op de home pagina kun je naar de lessons pagina. Daar staan playlists en een aantal stories. Die linken naar verhaaltjes.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
-
-## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-
+Ik heb EJS, JavaScript en CSS gebruikt. In de EJS heb ik gelinkt naar data uit de directus database. De routes naar die data staan in de server.js. De styling staat in de CSS en in de Javascript vind je een mini-interactie.
 
 ## Bronnen
-
+* https://medium.com/swlh/master-ejs-template-engine-with-node-js-and-expressjs-979cc22b69be
+* https://ejs.co/
+* https://css-tricks.com/the-big-gotcha-with-custom-properties/
+  
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
