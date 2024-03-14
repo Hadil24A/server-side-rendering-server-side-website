@@ -13,8 +13,8 @@
 ## Beschrijving
 Ik heb een website gemaakt waar de eindgebruikers in staat zijn om content van de methode af te kunnen spelen. 
 <img src="https://github.com/Hadil24A/server-side-rendering-server-side-website/assets/144008714/a5118140-5b2c-4316-9fdd-14dfa9658448" width="300px">
-<!-- Voeg een link toe naar Github Pages 🌐-->
 
+live website: https://server-side-rendering-server-side-website-f1zx.onrender.com
 ## Gebruik
 Via het menu op de home pagina kun je naar de lessons pagina. Daar staan playlists en een aantal stories. Die linken naar verhaaltjes.
 
