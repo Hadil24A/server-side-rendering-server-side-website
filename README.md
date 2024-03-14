@@ -12,7 +12,7 @@
 
 ## Beschrijving
 Ik heb een website gemaakt waar de eindgebruikers in staat zijn om content van de methode af te kunnen spelen. 
-<img src="https://github.com/Hadil24A/server-side-rendering-server-side-website/assets/144008714/e09465db-a55b-4dc5-9fbe-0e1f7b1e5dfc" width="300px>
+<img src="https://github.com/Hadil24A/server-side-rendering-server-side-website/assets/144008714/e09465db-a55b-4dc5-9fbe-0e1f7b1e5dfc" width="300px">
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Gebruik
