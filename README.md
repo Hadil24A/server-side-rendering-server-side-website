@@ -11,7 +11,10 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-Ik heb een website gemaakt waar de eindgebruikers in staat zijn om content van de methode af te kunnen spelen. 
+Ik heb een website gemaakt voor Tumi Mundo waar de eindgebruikers in staat zijn om content van de methode af te kunnen spelen. Ik heb het reeds bestaande grafische design naar een mobiele website vertaald. Ik heb nu in fase 1 de 'lessons' pagina gemaakt. Daar staan playlists en stories in. Ook heb ik en werkend navigatiemenu gemaakt. 
+
+
+
 <img src="https://github.com/Hadil24A/server-side-rendering-server-side-website/assets/144008714/a5118140-5b2c-4316-9fdd-14dfa9658448" width="300px">
 
 live website: https://server-side-rendering-server-side-website-f1zx.onrender.com
