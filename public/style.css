@@ -374,8 +374,9 @@ section:nth-of-type(3) a {
 }
 .stories {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .stories li {
