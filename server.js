@@ -56,10 +56,10 @@ app.get("/lessons/stories", function (request, response) {      // GET route voo
     response.render('lessons', {
       stories: storyData.data, 
       language: languageData.data,
-      playlist: playlistData.data,
-      audio: audioData.data})
     });
   });
+});
+
 
 app.get("/statistics", function (request, response) {      //GET route voor de statistics page
   response.send("statistics");         

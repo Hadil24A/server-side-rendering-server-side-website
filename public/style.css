@@ -66,7 +66,7 @@ html {
 
 .lessonsPage {
   background: var(--method-bg);
-  width: 100vw;
+  width: 100%;
 }
 
 /*__  __   ___   ___  ___  ____    ____   ___    ___   ____
@@ -249,17 +249,16 @@ dialog p {
   ||    ||==   \\   \\  ((   )) ||\\||  \\ 
   ||__| ||___ \_)) \_))  \\_//  || \|| \_)) */
 
-.playlist, .makeAPlaylist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .ownPlaylist {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   }
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .playlist li, .makeAPlaylist {
   background: var(--menu-clr);
@@ -338,6 +337,11 @@ dialog p {
   color: var(--active-menu-bg);
 }
 
+/* __  ______   ___   ____  __  ____  __ 
+ (( \ | || |  // \\  || \\ || ||    (( \
+  \\    ||   ((   )) ||_// || ||==   \\ 
+ \_))   ||    \\_//  || \\ || ||___ \_)) */
+
 #languageSelect {
   display: flex;
   flex-direction: row;
@@ -365,6 +369,9 @@ dialog p {
   padding: 0.2em 0.2em 0 0;
 }
 
+section:nth-of-type(3) a {
+  margin: 1em;
+}
 .stories {
   display: flex;
   flex-direction: column;
@@ -376,7 +383,7 @@ dialog p {
   border-radius: 8px;
   display: flex;
   flex-direction: row;
-  height: 12em;
+  height: 8em;
   margin: 2em;
   padding: 0.5em;
   position: relative;
@@ -384,8 +391,8 @@ dialog p {
 }
 
 .stories img {
-  height: 11em;
-  width: 11em;
+  height: 7em;
+  width: 7em;
   border-radius: 8px;
 }
 
@@ -399,6 +406,7 @@ dialog p {
 }
 
 .stories p:nth-of-type(2) {
+  font-size: 11px;
   line-height: 1.3em;
   padding-left: 0.5em;
 }
@@ -444,3 +452,10 @@ dialog p {
   height: 2em;
   width: 4em;
 }
+
+/*___  __    __        __  ______   ___   ____  __  ____  __ 
+ // \\ ||    ||       (( \ | || |  // \\  || \\ || ||    (( \
+ ||=|| ||    ||        \\    ||   ((   )) ||_// || ||==   \\ 
+ || || ||__| ||__|    \_))   ||    \\_//  || \\ || ||___ \_))  */
+
+ 
